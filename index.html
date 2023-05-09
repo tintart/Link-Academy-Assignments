@@ -1,78 +1,20 @@
-Assignment - Utilizarea selectorilor CSS avansaţi
-Se dă următorul document (linkul pentru download).
-
-Fără nicio modificare în codul HTML, scrieţi stilizarea cu care se vor efectua următoarele lucruri:
-
-textul tuturor linkurilor care indică una dintre adresele care îi aparţin site-ului Google trebuie colorat cu verde;
-
-textul linkului care indică site-ul LINK group trebuie colorat cu roşu;
-
-paragrafele din cadrul elementului second-div trebuie colorate alternativ cu roşu și albastru (Paragraph 4 să fie roşu, Paragraph 5 să fie albastru, Paragraph 6 din nou roşu...)
-
-la sfârşitul Paragrafului 2 şi Paragrafului 3, folosind CSS, adăugaţi textul – NEW, care va fi galben;
-
-trecând mouse-ul peste elementul Paragraph 10, textul său trebuie să devină înclinat/italic.
-
-
-Stilizarea se poate scrie în cadrul elementului style în documentul HTML sau într-un fişier separat.
-
-Notă: Exerciţiul trebuie încărcat pe GitHub, în cadrul repozitoriului public, iar coordonatorului cursului trebuie să-i trimiteți linkul către acest repozitoriu.
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Advanced CSS - Assignment 1</title>
-  <style>
-    a[href^="https://www.google.com"] {
-      color: green;
-    }
-    
-    a[target] {
-      color: red;
-    }
-    
-    #second-div p:nth-of-type(odd) {
-      color: red;
-    }
-    
-    #second-div p:nth-of-type(even) {
-      color: blue;
-    }
-    
-    #second-div p:nth-of-type(2)::after,
-    #second-div p:nth-of-type(3)::after {
-      content: " - NEW";
-      color: yellow;
-    }
-    
-    p:nth-of-type(10):hover {
-      font-style: italic;
-    }
-  </style>
+    <title>Animation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+ 
 </head>
+
 <body>
-  <h1>Main Heading</h1>
-  <p>Paragraph 1</p>
-  <a href="https://www.google.com/">Google</a>
-  <a href="https://www.google.com/doodles">Google Doodles</a>
-  <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
-  <div id="first-div">
-    <h2>Subheading</h2>
-    <p>Paragraph 2</p>
-    <p>Paragraph 3</p>
-    <div id="second-div">
-      <h3>Sub subheading</h3>
-      <p>Paragraph 4</p>
-      <p>Paragraph 5</p>
-      <p>Paragraph 6</p>
-      <p>Paragraph 7</p>
-      <p>Paragraph 8</p>
+    <div class="container">
+        <div class="circle black"></div>
+        <div class="circle transparent"></div>
     </div>
-  </div>
-  <p>Paragraph 9</p>
-  <p>Paragraph 10</p>
+
 </body>
+
 </html>
